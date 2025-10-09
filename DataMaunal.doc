@@ -1,0 +1,656 @@
+# 신한 가맹점 헬스케어 - 데이터 연동 가이드
+
+## 📋 목차
+1. [프로젝트 구조](#프로젝트-구조)
+2. [데이터 형식 (JSON 스키마)](#데이터-형식)
+3. [데이터 연결 방법](#데이터-연결-방법)
+4. [Python 백엔드 연동](#python-백엔드-연동)
+5. [예제 코드](#예제-코드)
+
+---
+
+## 🏗️ 프로젝트 구조
+
+```
+src/
+├── App.jsx                    # 메인 라우팅 및 데이터 관리
+├── screens/
+│   ├── HomeScreen.jsx         # 홈 화면
+│   ├── DetailReportScreen.jsx # 상세 리포트
+│   ├── SolutionScreen.jsx     # 추천 솔루션
+│   ├── WebDashboardScreen.jsx # 웹 대시보드
+│   └── AdminConsoleScreen.jsx # 관리자 콘솔
+└── services/
+    └── api.js                 # API 호출 함수 (추가 필요)
+```
+
+---
+
+## 📊 데이터 형식 (JSON 스키마)
+
+### 1. HomeScreen 데이터
+
+```json
+{
+  "healthData": {
+    "score": 72,
+    "status": "warning",        // "good" | "warning" | "danger"
+    "daysUntilCrisis": 45
+  },
+  "riskSignals": [
+    {
+      "icon": "repeat",         // "repeat" | "trending" | "package"
+      "title": "재방문 고객 20% 감소",
+      "description": "지난 달 대비 재방문율 급격히 하락",
+      "color": "red"            // "red" | "orange" | "amber"
+    }
+  ]
+}
+```
+
+### 2. DetailReportScreen 데이터
+
+```json
+{
+  "salesData": [
+    { "month": "4월", "sales": 3200 },
+    { "month": "5월", "sales": 3800 }
+  ],
+  "customerData": {
+    "returning": 45,
+    "new": 55,
+    "ageDistribution": [
+      { "age": "20대", "percentage": 15 },
+      { "age": "30대", "percentage": 35 }
+    ]
+  },
+  "comparisonData": {
+    "industryAverage": 85,
+    "ranking": 15,
+    "totalStores": 50,
+    "additionalMetrics": [
+      { "label": "전월 대비", "value": "-5%" }
+    ]
+  }
+}
+```
+
+### 3. SolutionScreen 데이터
+
+```json
+{
+  "improvementSolutions": [
+    {
+      "priority": 1,
+      "title": "고객 재방문 캠페인",
+      "description": "기존 고객 대상 맞춤형 할인 쿠폰 제공",
+      "expectedEffect": "재방문 15% ↑",
+      "cost": "30만원",
+      "duration": "1개월",
+      "badge": "긴급"           // optional
+    }
+  ],
+  "financialProducts": [
+    {
+      "name": "마케팅 지원 대출",
+      "description": "가맹점 마케팅 활동을 위한 특별 금리 대출",
+      "interestRate": "3.5%",
+      "maxAmount": "최대 500만원",
+      "badge": "추천",          // optional
+      "additionalInfo": [
+        { "label": "상환 기간", "value": "최대 12개월" }
+      ],
+      "benefits": [
+        "마케팅 비용 사용 시 금리 우대",
+        "3개월 거치 가능"
+      ]
+    }
+  ]
+}
+```
+
+### 4. WebDashboardScreen 데이터
+
+```json
+{
+  "healthData": {
+    "score": 72,
+    "status": "warning",
+    "daysUntilCrisis": 45
+  },
+  "salesData": [
+    { "month": "4월", "sales": 3200 },
+    // ... 12개월 데이터
+  ],
+  "customerData": {
+    "returning": 45,
+    "new": 55
+  },
+  "shapData": [
+    { "label": "재방문율 감소", "value": 0.25 },
+    { "label": "업종 순위 하락", "value": 0.18 }
+  ]
+}
+```
+
+### 5. AdminConsoleScreen 데이터
+
+```json
+{
+  "regionName": "성동구",
+  "totalStores": 4185,
+  "statusBreakdown": [
+    {
+      "status": "안전",
+      "count": 2500,
+      "percentage": 60,
+      "color": "safe"          // "safe" | "good" | "caution" | "warning" | "danger"
+    }
+  ],
+  "riskMerchants": [
+    {
+      "name": "호호치킨",
+      "category": "치킨",
+      "riskScore": 92,
+      "riskType": "매출급락형",  // "매출급락형" | "고객이탈형" | "경쟁열위형"
+      "lastConsultDate": "2024-09-15", // or null
+      "isUrgent": true
+    }
+  ]
+}
+```
+
+---
+
+## 🔌 데이터 연결 방법
+
+### 방법 1: JSON 파일 사용 (개발/테스트)
+
+#### 1-1. JSON 파일 생성
+
+```
+public/data/
+├── home.json
+├── detailReport.json
+├── solution.json
+├── webDashboard.json
+└── adminConsole.json
+```
+
+#### 1-2. 데이터 로드 함수 생성
+
+`src/services/dataLoader.js`:
+
+```javascript
+export const loadJSON = async (filename) => {
+  try {
+    const response = await fetch(`/data/${filename}`);
+    if (!response.ok) throw new Error('데이터 로드 실패');
+    return await response.json();
+  } catch (error) {
+    console.error('JSON 로드 에러:', error);
+    return null;
+  }
+};
+```
+
+#### 1-3. App.jsx에서 사용
+
+```javascript
+import { useState, useEffect } from 'react';
+import { loadJSON } from './services/dataLoader';
+
+export default function App() {
+  const [homeData, setHomeData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await loadJSON('home.json');
+      setHomeData(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>로딩 중...</div>;
+
+  return <HomeScreen {...homeData} />;
+}
+```
+
+---
+
+### 방법 2: REST API 연동 (프로덕션)
+
+#### 2-1. API 서비스 생성
+
+`src/services/api.js`:
+
+```javascript
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+
+// 공통 fetch 함수
+const fetchAPI = async (endpoint, options = {}) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      ...options,
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API 에러: ${response.status}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('API 호출 실패:', error);
+    throw error;
+  }
+};
+
+// 각 화면별 API 함수
+export const api = {
+  // 홈 화면 데이터
+  getHomeData: (merchantId) => 
+    fetchAPI(`/api/merchants/${merchantId}/home`),
+  
+  // 상세 리포트 데이터
+  getDetailReport: (merchantId) => 
+    fetchAPI(`/api/merchants/${merchantId}/report`),
+  
+  // 추천 솔루션 데이터
+  getSolutions: (merchantId) => 
+    fetchAPI(`/api/merchants/${merchantId}/solutions`),
+  
+  // 웹 대시보드 데이터
+  getDashboard: (merchantId) => 
+    fetchAPI(`/api/merchants/${merchantId}/dashboard`),
+  
+  // 관리자 콘솔 데이터
+  getAdminData: (regionName) => 
+    fetchAPI(`/api/admin/regions/${regionName}`),
+  
+  // 가맹점 목록
+  getMerchants: () => 
+    fetchAPI('/api/merchants'),
+};
+```
+
+#### 2-2. App.jsx에서 API 사용
+
+```javascript
+import { useState, useEffect } from 'react';
+import { api } from './services/api';
+
+export default function App() {
+  const [homeData, setHomeData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  const merchantId = '12345'; // 실제로는 로그인 정보에서 가져옴
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const data = await api.getHomeData(merchantId);
+        setHomeData(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, [merchantId]);
+
+  if (loading) return <div>로딩 중...</div>;
+  if (error) return <div>에러: {error}</div>;
+
+  return <HomeScreen {...homeData} />;
+}
+```
+
+---
+
+## 🐍 Python 백엔드 연동
+
+### FastAPI 예제
+
+`backend/main.py`:
+
+```python
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import List, Optional
+import json
+
+app = FastAPI()
+
+# CORS 설정 (React 개발 서버와 통신)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # React 개발 서버
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# 데이터 모델 정의
+class HealthData(BaseModel):
+    score: int
+    status: str
+    daysUntilCrisis: int
+
+class RiskSignal(BaseModel):
+    icon: str
+    title: str
+    description: str
+    color: str
+
+class HomeData(BaseModel):
+    healthData: HealthData
+    riskSignals: List[RiskSignal]
+
+# API 엔드포인트
+@app.get("/api/merchants/{merchant_id}/home", response_model=HomeData)
+async def get_home_data(merchant_id: str):
+    """
+    홈 화면 데이터 반환
+    """
+    # 실제로는 DB에서 데이터를 가져옴
+    # 여기서는 예제 데이터 반환
+    
+    return {
+        "healthData": {
+            "score": 72,
+            "status": "warning",
+            "daysUntilCrisis": 45
+        },
+        "riskSignals": [
+            {
+                "icon": "repeat",
+                "title": "재방문 고객 20% 감소",
+                "description": "지난 달 대비 재방문율 급격히 하락",
+                "color": "red"
+            }
+        ]
+    }
+
+@app.get("/api/merchants/{merchant_id}/report")
+async def get_detail_report(merchant_id: str):
+    """
+    상세 리포트 데이터 반환
+    """
+    # CSV/JSON 파일 읽기 또는 DB 쿼리
+    return {
+        "salesData": [...],
+        "customerData": {...},
+        "comparisonData": {...}
+    }
+
+# 서버 실행
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+```
+
+### Flask 예제
+
+`backend/app.py`:
+
+```python
+from flask import Flask, jsonify, request
+from flask_cors import CORS
+import json
+
+app = Flask(__name__)
+CORS(app)  # CORS 활성화
+
+@app.route('/api/merchants/<merchant_id>/home', methods=['GET'])
+def get_home_data(merchant_id):
+    """홈 화면 데이터"""
+    # 실제로는 DB에서 데이터를 가져옴
+    data = {
+        "healthData": {
+            "score": 72,
+            "status": "warning",
+            "daysUntilCrisis": 45
+        },
+        "riskSignals": [...]
+    }
+    return jsonify(data)
+
+@app.route('/api/merchants/<merchant_id>/report', methods=['GET'])
+def get_detail_report(merchant_id):
+    """상세 리포트 데이터"""
+    # CSV 파일 읽기 예제
+    import pandas as pd
+    
+    # CSV에서 데이터 로드
+    sales_df = pd.read_csv(f'data/sales_{merchant_id}.csv')
+    
+    data = {
+        "salesData": sales_df.to_dict('records'),
+        "customerData": {...},
+        "comparisonData": {...}
+    }
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8000)
+```
+
+---
+
+## 💡 예제 코드
+
+### 완전한 App.jsx 예제 (API 연동)
+
+```javascript
+import React, { useState, useEffect } from 'react';
+import HomeScreen from './screens/HomeScreen';
+import DetailReportScreen from './screens/DetailReportScreen';
+import SolutionScreen from './screens/SolutionScreen';
+import WebDashboardScreen from './screens/WebDashboardScreen';
+import AdminConsoleScreen from './screens/AdminConsoleScreen';
+import { api } from './services/api';
+
+export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('home');
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  const merchantId = '12345'; // 실제로는 로그인에서 가져옴
+
+  // 화면별 데이터 로드
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        
+        let result;
+        switch (currentScreen) {
+          case 'home':
+            result = await api.getHomeData(merchantId);
+            break;
+          case 'detail':
+            result = await api.getDetailReport(merchantId);
+            break;
+          case 'solution':
+            result = await api.getSolutions(merchantId);
+            break;
+          case 'dashboard':
+            result = await api.getDashboard(merchantId);
+            break;
+          case 'admin':
+            result = await api.getAdminData('성동구');
+            break;
+          default:
+            result = await api.getHomeData(merchantId);
+        }
+        
+        setData(result);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, [currentScreen, merchantId]);
+
+  // 로딩 상태
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-xl font-bold text-blue-700">로딩 중...</div>
+        </div>
+      </div>
+    );
+  }
+
+  // 에러 상태
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-xl font-bold text-red-700">에러 발생</div>
+          <div className="text-gray-600 mt-2">{error}</div>
+          <button 
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
+          >
+            다시 시도
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // 화면 렌더링
+  const navigate = (screen) => setCurrentScreen(screen);
+
+  switch (currentScreen) {
+    case 'home':
+      return (
+        <HomeScreen
+          {...data}
+          onDetailReport={() => navigate('detail')}
+          onSolutionCheck={() => navigate('solution')}
+          onNavigate={navigate}
+        />
+      );
+    
+    case 'detail':
+      return (
+        <DetailReportScreen
+          {...data}
+          onBack={() => navigate('home')}
+        />
+      );
+    
+    case 'solution':
+      return (
+        <SolutionScreen
+          {...data}
+          onBack={() => navigate('home')}
+        />
+      );
+    
+    case 'dashboard':
+      return (
+        <WebDashboardScreen
+          {...data}
+          onNavigate={navigate}
+        />
+      );
+    
+    case 'admin':
+      return (
+        <AdminConsoleScreen
+          {...data}
+        />
+      );
+    
+    default:
+      return <HomeScreen {...data} onNavigate={navigate} />;
+  }
+}
+```
+
+---
+
+## 🔧 환경 변수 설정
+
+`.env` 파일 생성:
+
+```bash
+# API 서버 주소
+REACT_APP_API_URL=http://localhost:8000
+
+# 개발/프로덕션 환경
+REACT_APP_ENV=development
+```
+
+---
+
+## 📝 체크리스트
+
+### 백엔드 개발자가 준비할 것:
+
+- [ ] API 엔드포인트 구현
+- [ ] CORS 설정
+- [ ] 인증/인가 구현 (필요시)
+- [ ] 데이터 검증 (Pydantic, Marshmallow 등)
+- [ ] 에러 처리
+- [ ] API 문서 (Swagger/OpenAPI)
+
+### 프론트엔드 개발자가 준비할 것:
+
+- [ ] `src/services/api.js` 생성
+- [ ] 에러 핸들링 UI
+- [ ] 로딩 상태 UI
+- [ ] 환경 변수 설정
+- [ ] API 응답 데이터 형식 확인
+
+---
+
+## 🚀 빠른 시작
+
+### 1. 백엔드 실행 (Python)
+
+```bash
+cd backend
+pip install fastapi uvicorn
+uvicorn main:app --reload
+```
+
+### 2. 프론트엔드 실행 (React)
+
+```bash
+cd shinhan-healthcare
+npm start
+```
+
+### 3. API 테스트
+
+브라우저에서 `http://localhost:8000/docs` 접속 (FastAPI의 경우)
+
+---
+
+## 📞 문의
+
+- 프론트엔드 관련: React 개발팀
+- 백엔드 API 관련: Python 개발팀
+- 데이터 형식 문의: 데이터 엔지니어링팀

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 // 각 화면 컴포넌트 import
-import HomeScreen from './screens/HomeScreen';
-import DetailReportScreen from './screens/DetailReportScreen';
-import SolutionScreen from './screens/SolutionScreen';
-import WebDashboardScreen from './screens/WebDashboardScreen';
-import AdminConsoleScreen from './screens/AdminConsoleScreen';
+import HomeScreen from './UX/HomeScreen';
+import DetailReportScreen from './UX/DetailReportScreen';
+import SolutionScreen from './UX/SolutionScreen';
+import WebDashboardScreen from './UX/WebDashboardScreen';
+import AdminConsoleScreen from './UX/AdminConsoleScreen';
 
 // 샘플 데이터 (나중에 JSON 파일에서 로드)
 const SAMPLE_DATA = {
