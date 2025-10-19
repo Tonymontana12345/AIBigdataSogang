@@ -57,6 +57,8 @@ const DepartmentAssignModal = ({ isOpen, onClose, onAssign }) => {
     { id: 'sales_decline', label: '매출 급락형 담당' },
     { id: 'other_risk', label: '기타 위험 담당' },
     { id: 'competitive_disadvantage', label: '경쟁 열위형 담당' },
+    { id: 'competitive_delivery', label: ' 배달 의존형 담당' },
+      { id: 'competitive_Total', label: '종합 위기 담당' },
   ];
 
   const handleToggle = (deptId) => {
