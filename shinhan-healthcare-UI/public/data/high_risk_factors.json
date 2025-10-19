@@ -1,0 +1,1522 @@
+[
+  {
+    "merchant_id": "D402962627",
+    "closure_probability": 0.9865471124649048,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_TO_UE_CT_interval_volatility_6m",
+        "feature_kr": "거래건수 6개월변동성",
+        "value": 0.8944271909999159,
+        "shap_value": 2.339315176010132,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 2.0,
+        "shap_value": -1.0826661586761475,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_at_worst_now",
+        "feature_kr": "매출액 현재최악여부",
+        "value": 0.0,
+        "shap_value": 0.43681323528289795,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.3946323096752167,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 1.0,
+        "shap_value": -0.33414629101753235,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.23829607665538788,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.22290390729904175,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.1487162560224533,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 1.0,
+        "shap_value": 0.14522846043109894,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_3m",
+        "feature_kr": "매출액 3개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.14498430490493774,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "F8A788D183",
+    "closure_probability": 0.9790109992027283,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.5745800733566284,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_interval_volatility_6m",
+        "feature_kr": "거래건수 6개월변동성",
+        "value": 0.752772652709081,
+        "shap_value": 1.24318265914917,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 2.0,
+        "shap_value": -0.9345952272415161,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_total_decline_6m",
+        "feature_kr": "매출액 6개월총하락폭",
+        "value": 1.0,
+        "shap_value": -0.6625310182571411,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 2.0,
+        "shap_value": 0.5705716013908386,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 4.0,
+        "shap_value": 0.5591747760772705,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 5.0,
+        "shap_value": 0.491902619600296,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_3m",
+        "feature_kr": "매출액 3개월하락횟수",
+        "value": 1.0,
+        "shap_value": -0.3201814293861389,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 2.0,
+        "shap_value": -0.30618637800216675,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.22056058049201965,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "51DB10788F",
+    "closure_probability": 0.9741382002830505,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 5.0,
+        "shap_value": 0.6800202131271362,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_interval_volatility_6m",
+        "feature_kr": "거래건수 6개월변동성",
+        "value": 0.6324555320336759,
+        "shap_value": 0.653896152973175,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 1.0,
+        "shap_value": -0.3303414583206177,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_total_decline_6m",
+        "feature_kr": "매출액 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.3208145499229431,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2783745527267456,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.27749842405319214,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.193840891122818,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_at_worst_now",
+        "feature_kr": "매출액 현재최악여부",
+        "value": 1.0,
+        "shap_value": 0.17082124948501587,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.12336202710866928,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 0.0,
+        "shap_value": -0.07063791900873184,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "C05AB78A24",
+    "closure_probability": 0.9702373147010803,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 3.0,
+        "shap_value": -2.104660749435425,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.2926896810531616,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_interval_volatility_6m",
+        "feature_kr": "거래건수 6개월변동성",
+        "value": 0.6324555320336759,
+        "shap_value": 1.232119083404541,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 2.0,
+        "shap_value": -1.0133862495422363,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 3.0,
+        "shap_value": 0.7542914748191833,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 4.0,
+        "shap_value": 0.6172224879264832,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 1.0,
+        "shap_value": 0.60883629322052,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_3m",
+        "feature_kr": "매출액 3개월하락횟수",
+        "value": 1.0,
+        "shap_value": -0.33409425616264343,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_total_decline_6m",
+        "feature_kr": "매출액 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.32717397809028625,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 1.0,
+        "shap_value": 0.2319529950618744,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "0866C50DAD",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "1A9644F28E",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "20AFB06A43",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "20CD5C4AB7",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "25100A92DC",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "259546987D",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "25D2E98F3A",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "261CA88AD3",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "2858CD7B1D",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "2BE8E6A10C",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "3521453C6F",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "4BF6B1EEF7",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "5424DBE00D",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "6624D7D635",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "6A4747F757",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "6B3AA25B77",
+    "closure_probability": 0.9675928354263306,
+    "risk_factors": [
+      {
+        "feature": "RC_M1_UE_CUS_CN_distance_from_best",
+        "feature_kr": "고객수 최고점대비거리",
+        "value": 1.0,
+        "shap_value": 1.235539197921753,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+        "feature_kr": "거래건수 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.3201386332511902,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+        "feature_kr": "객단가 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.25617775321006775,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_12m",
+        "feature_kr": "매출액 12개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.2547227442264557,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+        "feature_kr": "객단가 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.1625962108373642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_at_worst_now",
+        "feature_kr": "객단가 현재최악여부",
+        "value": 1.0,
+        "shap_value": -0.12637068331241608,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SAA_decline_count_6m",
+        "feature_kr": "매출액 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": -0.07720016688108444,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+        "feature_kr": "고객수 6개월하락횟수",
+        "value": 0.0,
+        "shap_value": 0.07476478815078735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+        "feature_kr": "객단가 6개월총하락폭",
+        "value": 0.0,
+        "shap_value": 0.05718080326914787,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_months_since_best",
+        "feature_kr": "거래건수 최고점이후개월",
+        "value": 0.0,
+        "shap_value": 0.0504956915974617,
+        "impact": "increase"
+      }
+    ]
+  }
+]

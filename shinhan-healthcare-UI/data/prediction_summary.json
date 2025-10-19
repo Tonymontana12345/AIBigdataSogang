@@ -1,0 +1,19 @@
+{
+  "prediction_date": "202412",
+  "total_active_merchants": 4058,
+  "risk_distribution": {
+    "Very Low": 3069,
+    "Low": 692,
+    "Medium": 207,
+    "High": 82,
+    "Very High": 8
+  },
+  "high_risk_count": 90,
+  "probability_stats": {
+    "mean": 0.08705220371484756,
+    "median": 0.03644656389951706,
+    "std": 0.1217818632721901,
+    "min": 0.002566449111327529,
+    "max": 0.8494594097137451
+  }
+}

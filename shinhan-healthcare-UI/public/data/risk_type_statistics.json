@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "total_merchants": 4058,
+    "prediction_date": "202412",
+    "risk_types": [
+      "정상",
+      "매출 급락형",
+      "기타 위험",
+      "경쟁 열위형"
+    ]
+  },
+  "type_distribution": {
+    "정상": 3633,
+    "매출 급락형": 324,
+    "기타 위험": 90,
+    "경쟁 열위형": 11
+  },
+  "priority_distribution": {
+    "normal": 3633,
+    "urgent": 324,
+    "watch": 90,
+    "important": 11
+  },
+  "type_statistics": {
+    "정상": {
+      "count": 3633,
+      "avg_risk_score": 0.45224332507569504,
+      "median_risk_score": 0.0,
+      "avg_closure_probability": 0.005918944254517555,
+      "avg_confidence": 0.0
+    },
+    "매출 급락형": {
+      "count": 324,
+      "avg_risk_score": 50.614197530864196,
+      "median_risk_score": 59.0,
+      "avg_closure_probability": 0.5118448734283447,
+      "avg_confidence": 0.30123456790123454
+    },
+    "기타 위험": {
+      "count": 90,
+      "avg_risk_score": 34.8,
+      "median_risk_score": 35.0,
+      "avg_closure_probability": 0.35340824723243713,
+      "avg_confidence": 0.5333333333333333
+    },
+    "경쟁 열위형": {
+      "count": 11,
+      "avg_risk_score": 43.81818181818182,
+      "median_risk_score": 34.0,
+      "avg_closure_probability": 0.4429715871810913,
+      "avg_confidence": 0.4
+    }
+  }
+}
